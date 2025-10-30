@@ -26,8 +26,8 @@ function contarVocales(producto, vocal) {
 
 }
 let prod = { nombre: "Programador", precio: 100 };
-let vocales = "o";
-contarVocales(prod, vocales);
+let buscarVocal_1 = "o";
+contarVocales(prod, buscarVocal_1);
 
 
 //Ejericio 3: Invertir el nombre de una persona
