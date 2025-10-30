@@ -1,6 +1,21 @@
 //Bloque 2: Objetos en listas (versión con arreglos de objetos)
 //Ejercicio 1: Contar caracteres en nombres de varios empleados
-function contarNombresEmpleados() {
+function contarNombresEmpleados(empleados) {
+    
+    for (let i = 0; i < empleados.length; i++) {
+        let resultado = contarNombre(empleados[i]);
+        console.log(resultado);
+
+    }
+}
+let empl_1 = [
+    { nombre: "Ana", edad: 22 },
+    { nombre: "Santiago", edad: 30 },
+    { nombre: "Rosa", edad: 27 }
+];
+console.log(`\n`);
+contarNombresEmpleados(empl_1);
+/*function contarNombresEmpleados() {
     let empleados = [
         { nombre: "Ana", edad: 22 },
         { nombre: "Santiago", edad: 30 },
@@ -8,73 +23,79 @@ function contarNombresEmpleados() {
     ];
 
     for (let i = 0; i < empleados.length; i++) {
-        contarNombre(empleados[i]);
+        let resultado = contarNombre(empleados[i]);
+        console.log(resultado);
 
     }
 }
-contarNombresEmpleados();
+console.log(`\n`)
+contarNombresEmpleados();*/
 
 
 //Ejercicio 2: Contar vocales en nombres de empleados
-function contarVocalesEmpleados(vocal) {
-    let empleados = [
-        { nombre: "Andrea", edad: 35 },
-        { nombre: "Marcos", edad: 29 },
-        { nombre: "Lucía", edad: 40 }
-    ];
+function contarVocalesEmpleados(empleados, vocal) {
 
     for (let i = 0; i < empleados.length; i++) {
-        contarVocales(empleados[i], vocal);
+        let resultados = contarVocales(empleados[i], vocal);
+        console.log(resultados);
 
     }
 }
+let empl_2 = [
+        { nombre: "Andrea", edad: 35 },
+        { nombre: "Marcos", edad: 29 },
+        { nombre: "Lucía", edad: 40 }
+];
 let buscarVocal_2 = "a"; //Cambiar el nombre de las variables para evitar conflicto de llamado en la función anterior!
-contarVocalesEmpleados(buscarVocal_2);
+contarVocalesEmpleados(empl_2, buscarVocal_2);
 
 
 //Ejercicio 3: Invertir los nombres de empleados
-function invertirNombresEmpleados() {
-    let empleados = [
+function invertirNombresEmpleados(empleados) {
+
+    for (let i = 0; i < empleados.length; i++) {
+        let resultados = invertirNombre(empleados[i]);
+        console.log(resultados);
+
+    }
+}
+let empl_3 = [
         { nombre: "Luis", edad: 26 },
         { nombre: "Carmen", edad: 33 },
         { nombre: "Pedro", edad: 24 }
     ];
-
-    for (let i = 0; i < empleados.length; i++) {
-        invertirNombre(empleados[i]);
-
-    }
-}
-invertirNombresEmpleados();
+invertirNombresEmpleados(empl_3);
 
 
 //Ejercicio 4: Comparar longitudes de ciudades de residencia
-function compararCiudadesResidencia() {
-    let empleados = [
-        { nombre: "Carlos", ciudad: "Milagro" },
-        { nombre: "Andrea", ciudad: "Guayaquil" },
-        { nombre: "José", ciudad: "Quito" }
-    ];
+function compararCiudadesResidencia(empleados) {
 
-    for (let i = 0; i < empleados.length - 1; i++) {
-        compararNombres(empleados[i], empleados[i + 1]);
+    for (let i = 0; i < empleados.length-1; i++) {
+        let resultado = compararCiudades(empleados[i], empleados[i + 1]);
+        console.log(resultado);
 
     }
 }
-compararCiudadesResidencia();
+let empl_4 = [
+        { nombre: "Carlosss", ciudad: "Milagro" },
+        { nombre: "Andrea", ciudad: "Guayaquil" },
+        { nombre: "José", ciudad: "Quito" }
+    ];
+compararCiudadesResidencia(empl_4);
 
 
 //Ejercicio 5: Obtener iniciales de cargos de varios empleados
-function obtenerInicialesCargosEmpleados() {
-    let empleados = [
+function obtenerInicialesCargosEmpleados(empleados) {
+
+    for (let i = 0; i < empleados.length; i++) {
+        let resultados = obtenerIniciales(empleados[i]);
+        console.log(resultados);
+
+    }
+}
+let empl_5 = [
         { cargo: "Director General Académico" },
         { cargo: "Jefe de Laboratorio" },
         { cargo: "Asistente Administrativo" }
     ];
-
-    for (let i = 0; i < empleados.length; i++) {
-        obtenerIniciales(empleados[i]);
-
-    }
-}
-obtenerInicialesCargosEmpleados();
+obtenerInicialesCargosEmpleados(empl_5);
