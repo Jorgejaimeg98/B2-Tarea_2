@@ -1,7 +1,6 @@
-//Bloque 1: Ejercicios con objetos simples
+//Bloque 1: Ejercicios con objetos simples (Utilizar parametros en la función)
 //Ejercicio 1: Contar caracteres del nombre de un empleado
-function contarNombre() {
-    let empleado = { nombre: "Ana", edad: 25 };
+function contarNombre(empleado) {
     let contarCaracteres = empleado.nombre;
 
     for (let i = 0; i < contarCaracteres.length; i++) {
@@ -9,13 +8,12 @@ function contarNombre() {
 
     }
 }
-contarNombre();
+let empleador = { nombre: "Ana", edad: 25 };
+contarNombre(empleador);
 
 
 //Ejercicio 2: Contar apariciones de una vocal en el nombre de un producto
-function contarVocales() {
-    let producto = { nombre: "Programador", precio: 100 };
-    let vocal = "o";
+function contarVocales(producto, vocal) {
     let contador = 0;
 
     for (let i = 0; i < producto.nombre.length; i++) {
@@ -27,12 +25,13 @@ function contarVocales() {
     console.log(`La vocal '${vocal}' aparece ${contador} veces en el nombre '${producto.nombre}'`);
 
 }
-contarVocales();
+let prod = { nombre: "Programador", precio: 100 };
+let vocales = "o";
+contarVocales(prod, vocales);
 
 
 //Ejericio 3: Invertir el nombre de una persona
-function invertirNombre() {
-    let persona = { nombre: "Carlos", edad: 30 };
+function invertirNombre(persona) {
     let nombreInvertido = "";
 
     for (let i = persona.nombre.length - 1; i >= 0; i--) {
@@ -41,13 +40,12 @@ function invertirNombre() {
     console.log(`El nombre invertido de '${persona.nombre}' es '${nombreInvertido}'`);
 
 }
-invertirNombre();
+let pers = { nombre: "Carlos", edad: 30 };
+invertirNombre(pers);
 
 
 //Ejercicio 4: Comparar logitudes de nombres entre dos empleados
-function compararNombres() {
-    let empleado1 = { nombre: "María", edad: 28 };
-    let empleado2 = { nombre: "Guillermo", edad: 35 };
+function compararNombres(empleado1, empleado2) {
     let = logitudNombre1 = empleado1.nombre.length;
     let = logitudNombre2 = empleado2.nombre.length;
 
@@ -62,12 +60,13 @@ function compararNombres() {
 
     }
 }
-compararNombres();
+let empl1 = { nombre: "María", edad: 28 };
+let empl2 = { nombre: "Guillermo", edad: 35 };
+compararNombres(empl1, empl2);
 
 
 //Ejercicio 5: Obtener iniciales del cargo de un empleado
-function obtenerIniciales() {
-    let empleado = { cargo: "Director General Académico" };
+function obtenerIniciales(empleado) {
     let iniciales = "";
     let palabras = empleado.cargo.split(" ");
 
@@ -76,6 +75,7 @@ function obtenerIniciales() {
 
     }
     console.log(`Las iniciales del cargo '${empleado.cargo}' son '${iniciales}'`);
-    
+
 }
-obtenerIniciales();
+let empl = { cargo: "Director General Académico" };
+obtenerIniciales(empl);
